@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- @author: Andrez Ortiz -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="./webroot/css/style.css">
+    <title>Estadios que he visitado</title>
+    <script src="./webroot/js/jquery-2.0.3.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCrXfyJIrk4eboYjZvMsQhaUgekBFrC-yw&sensor=true&languaje=es&v3.10"></script>
+    <script src="./webroot/js/infobox.js"  ></script>
+    <script src="./webroot/js/stadiums.js"></script>
+    <link rel="icon" href="webroot/img/fav.png" type="image/gif" sizes="16x16">
+  </head>
+  <body onload="init()">
+    <div id="directions_panel"></div>
+    <div id="map_canvas"  ></div>      
+    <div id="map_canvas2" ></div>
+    <div id="pano" ></div>
+
+    <div id="control">
+      <b>Ruta a:</b>
+        <select id="end" onchange="calcRoute();" >        
+          <option value="0"                      >Seleccione</option>
+          <option value="25.87100,-100.3875999"  >Academia de Beisbol. El Carmen  </option>
+          <option value="19.165058,-96.122685"   >Beto Ávila. Veracruz </option>
+          <option value="28.655492,-106.08294"   >Manuel L. Almanza. Ch.</option>
+          <option value="33.8001195,-117.883064" >Angel Stadium. Anaheim </option>
+          <option value="28.625466, -106.021772" >Monumental Estadio Chihuahua</option>
+          <option value="26.940655,-105.719172 " >Gran Estadio Parral</option>
+          <option value="19.862795,-90.510908"   >Nelson Barrera Romellon. Camp</option>
+          <option value="25.539981,-103.429247"  >Estadio Revolución. Laguna</option>
+          <option value="29.0635972,-111.0501909">Estadio Sonora</option>
+          <option value="25.718112,-100.315411 " >Manuel L. Barragán. Mty</option>
+          <option value="23.235974,-106.432121"  >Teodoro Mariscal. Mzt</option>
+          <option value="40.829606,-73.926355"   >Yankee Stadium. NY</option>
+          <option value="19.302646,-99.150474"   >Estadio Azteca. DF</option>
+          <option value="19.332496,-99.191982"   >Estadio Universitario. DF</option>
+          <option value="19.1636586,-96.1220519" >Luis "Pirata" Fuentes, Ver</option>
+          <option value="28.7103781,-106.1434237">Reyes Baeza Terrazas, Ch</option>
+        </select>
+    </div>
+
+    <div id="distance"></div>
+    <div id="home" onclick="resetMap()"><img title="Click para reiniciar mapa" src="./webroot/img/home.png" width="50px"></div>
+  </body>
+</html>

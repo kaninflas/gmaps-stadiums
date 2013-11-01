@@ -1,0 +1,135 @@
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+#map_canvas { 
+  float:left;
+  height: 100%;
+  left: 0;
+  position:absolute;
+  width: 100%;
+  transform: all;
+}
+#pano{
+  display: none;
+  height: 100%;
+  float:right;
+  position:absolute; 
+  right: 0px; 
+  top: 0px; 
+  transform: all;
+  width: 0%; 
+}
+#map_canvas2{
+  height: 100%;
+  position:absolute;
+  right: 0;
+  transform: all;
+  width: 0%; 
+}
+.text {
+  padding: 0em 2em 2em;
+  font-size: 1.3em;
+  color:#FFF;
+  text-align:justify;
+}
+.title {
+  padding-bottom: 1em;
+  color:#FFF;
+  font-size: 2em !important;
+  font-weight: bold;
+  text-align:center;
+}
+.info_wrapper {
+  background:#2A2F30;
+  border-radius: 1em;
+  height:auto;
+  transition: all 0.7s;
+  width:auto;
+}
+.info_wrapper:hover{
+  background: #1C6375;
+}
+.buttonwrap{
+  position:absolute;
+  right:160px;
+  top:0;
+  height:35px;
+  widht: 200px;
+}
+#home {
+   cursor: pointer;
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+#home:hover{
+  opacity: 0.7;
+
+}
+.zoom {
+   cursor:pointer;
+   float:left;
+}
+.nozoom{
+    cursor:pointer;
+    float:left;
+}
+#home img{
+   width:30px;   
+  }
+
+
+
+
+  #panel {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -180px;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+  }
+
+  #directions_panel {
+    height: 100%;
+    font-family: fantasy;
+    float: right;
+    width: 31%;
+    overflow: auto;
+  }
+
+  #control {
+    background: #fff;
+    padding: 5px;
+    font-size: 14px;
+    font-family: Arial;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+    display: none;
+  }
+  #distance{
+    position: relative;
+    width: 200px;
+    top: 5px;
+    left: 100px;
+  }
+  @media print {
+    #map_canvas {
+      height: 500px;
+      margin: 0;
+    }
+
+    #directions_panel {
+      float: none;
+      width: auto;
+    }
+  }
+
+.info_wrapper{
+  padding:15px;
+}
+  .info_wrapper img{
+    width: 420px;
+    margin: auto;
+  }
